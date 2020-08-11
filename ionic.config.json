@@ -1,0 +1,7 @@
+{
+  "name": "songs-admin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
