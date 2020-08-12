@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,24 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  counterTab = 0;
+
+  constructor(
+    public alertController: AlertController
+  ) {}
+
+  count(){
+    this.counterTab +=1;
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Información',
+      message: 'Aplicación para administrar canciones',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
 
 }

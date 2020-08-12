@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Song</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #form="ngForm" (ngSubmit)="saveSong(form)">
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input type="text" required [(ngModel)]="song.title" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Artist</ion-label>
+      <ion-input type="text" required [(ngModel)]="song.artist" name="artist"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Genre</ion-label>
+      <ion-input type="text" required [(ngModel)]="song.genre" name="genre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Album</ion-label>
+      <ion-input type="text" [(ngModel)]="song.album" name="album"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lyric</ion-label>
+      <ion-textarea [(ngModel)]="song.lyric" name="lyric"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Save</button>
+  </form>
+</ion-content>
